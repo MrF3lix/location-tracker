@@ -1,5 +1,6 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
 
 def add_flipper_pods!(versions = {})
   versions['Flipper'] ||= '~> 0.33.1'
@@ -77,12 +78,18 @@ target 'LocationTracker' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'UMCore', path: '../node_modules/@unimodules/core/ios'
+  pod 'UMReactNativeAdapter', path: '../node_modules/@unimodules/react-native-adapter/ios', inhibit_warnings: true
+
+  pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'
+
   target 'LocationTrackerTests' do
     inherit! :complete
     # Pods for testing
   end
 
   use_native_modules!
+  use_unimodules!
 
   # Enables Flipper.
   #

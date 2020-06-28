@@ -1,4 +1,12 @@
 {
-  "name": "LocationTracker",
-  "displayName": "LocationTracker"
+    "name": "LocationTracker",
+    "displayName": "LocationTracker",
+    "ios": {
+        "infoPlist": {
+            "UIBackgroundModes": [
+                "location",
+                "fetch"
+            ]
+        }
+    }
 }
