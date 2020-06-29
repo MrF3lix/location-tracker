@@ -28,9 +28,7 @@ export const listen = callback => {
         if (error) {
             throw error;
         }
-
-        const location = locations[0];
-        callback(location)
+        locations.map(location => callback(location));
     });
 }
 
