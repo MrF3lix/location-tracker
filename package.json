@@ -27,7 +27,7 @@
     "expo-task-manager": "^8.3.0",
     "firebase": "^7.15.5",
     "react": "16.11.0",
-    "react-native": "0.62.2",
+    "react-native": "0.62.3",
     "react-native-device-info": "^5.6.1",
     "react-native-unimodules": "^0.10.1"
   },
